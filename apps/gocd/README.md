@@ -10,7 +10,11 @@ Start GitLab Services
     cd units
     fleetctl start gocd.service
     # wait for http://172.17.8.101:8153 is up
-    fleetctl start gocd-agent.service
+    fleetctl start gocd-agent-ci-base.service
+    fleetctl start gocd-agent-ci-app.service
+    fleetctl start gocd-agent-cd-dev.service
+    fleetctl start gocd-agent-cd-stage.service
+    fleetctl start gocd-agent-cd-prod.service
 
 check service status and get the gitlab service ip:
 
